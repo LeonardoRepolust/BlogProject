@@ -1,0 +1,25 @@
+{
+  "name": "comments",
+  "version": "1.0.0",
+  "main": "comment.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/comments/CommentService.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/comments/CommentService.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14"
+  }
+}

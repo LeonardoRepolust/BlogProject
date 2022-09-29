@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Blog</title>
+    <script type="module" src="./frontend/app.js"></script>
+
+</head>
+
+<body>
+    <div style="background-color: lightgrey;">
+        <h1>New Post</h1>
+        <input id="newPostTitle" type="text">
+        <button id="addPostButton">Add Post</button>
+    </div>
+
+    <div style="background-color: lightblue;">
+        <h1>My Blog</h1>
+        <button id="postGetButton">Get Posts</button>
+
+        <span></span>
+        <h2 id="postsHeader" style="display: none;">Posts:</h2>
+
+        <div id="postContainer">
+        </div>
+    </div>
+
+    <div id="shownPost">
+    </div>
+
+    <div id="commentContainer" style="background-color: azure;">
+        <h2>Comment(s) on Post</h2>
+    </div>
+
+    <div id="newCommentContainer" style="background-color: azure; margin-top: 30px;">
+        <input id="newCommentBody" type="text">
+        <button id="addCommentButton">Comment On Post</button>
+    </div>
+</body>
+
+<style>
+    #shownPost {
+        margin-top: 50px;
+        background-color: aliceblue;
+    }
+</style>
+
+</html>
