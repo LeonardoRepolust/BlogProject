@@ -1,0 +1,55 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/client",
+			"problemMatcher": [],
+			"label": "client",
+			"detail": "react-scripts start"
+		}, 
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/comments",
+			"problemMatcher": [],
+			"label": "comments",
+		}, 
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/event-bus",
+			"problemMatcher": [],
+			"label": "event-bus",
+		}, 
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/moderation",
+			"problemMatcher": [],
+			"label": "posts",
+		}, 
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/posts",
+			"problemMatcher": [],
+			"label": "query",
+		}, 
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "/resanovic/BlogModerationV3/query",
+			"problemMatcher": [],
+			"label": "moderation",
+		}, 
+
+		{
+			"label": "Start All services",
+			"dependsOn": ["client", "comments", "posts", "event-bus", "query", "moderation"]
+		  }
+	]
+
+	
+}
