@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const axios = require("axios");
 
 const app = express();
 app.use(bodyParser.json());
@@ -8,6 +9,8 @@ app.use(cors());
 
 const posts = {};
 
+//3)
+//Extrahiere Event Handling in eigene Methode
 const handleEvent = (type, data) => {
   if(type === 'PostCreated'){
     const { id, title }=data;
@@ -29,6 +32,9 @@ app.get('/posts', (req, res) => {
 
 app.post('/events', (req, res) => {
   const { type, data } = req.body;
+
+  //3)
+  handleEvent(type,data);
 
   if (type === 'PostCreated') {
     const { id, title } = data;
@@ -60,6 +66,9 @@ app.post('/events', (req, res) => {
   res.send({});
 });
 
+//3)
+//Holle alle Events, die bisher erzeugt wurden.
+//Dann in einer For Schleife alle Events überarbeiten
 app.listen(4002, async () => {
   console.log('Listening on 4002');
   
