@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const axios = require("axios");
 
 const app = express();
 app.use(bodyParser.json());
@@ -8,11 +9,33 @@ app.use(cors());
 
 const posts = {};
 
+//3)
+//Extrahiere Event Handling in eigene Methode
+const handleEvent = (type, data) => {
+  if(type === 'PostCreated'){
+    const { id, title }=data;
+
+    posts[id] = {id, title, comments: []};
+  }
+
+  if(type === 'CommentCreated'){
+    const  { id, content, postId, status }=data;
+
+    const post = posts[postId];
+    post.comments.push({ id, content, status});
+  }
+}
+
 app.get('/posts', (req, res) => {
   res.send(posts);
 });
 
-const handleEvent = (type, data) =>{
+app.post('/events', (req, res) => {
+  const { type, data } = req.body;
+
+  //3)
+  handleEvent(type,data);
+
   if (type === 'PostCreated') {
     const { id, title } = data;
 
@@ -37,25 +60,23 @@ const handleEvent = (type, data) =>{
     comment.status = status;
     comment.content = content;
   }
-};
 
-app.post('/events', (req, res) => {
-  const { type, data } = req.body;
-
-  handleEvent(type, data);
+  console.log(posts);
 
   res.send({});
 });
 
-
-app.listen(4002, async() => {
+//3)
+//Holle alle Events, die bisher erzeugt wurden.
+//Dann in einer For Schleife alle Events überarbeiten
+app.listen(4002, async () => {
   console.log('Listening on 4002');
-
+  
   const res = await axios.get('http://localhost:4005/events');
 
   for(let event of res.data){
-    console.log('Processing event: ', event.type);
-    handleEvent(event.type, event.data);
+    console.log('Processing event: ',event.type);
 
+    handleEvent(event.type, event.data)
   }
 });

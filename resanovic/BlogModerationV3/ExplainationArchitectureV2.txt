@@ -1,0 +1,30 @@
+falls bis 21. vergessen, anbei Erklärung zu ArchitekturV2
+
+Anleitung
+*********
+0.1) (EventBus) leeres Array für Events anlegen
+  1) (EventBus) Speichere Events im Event-Bus
+  2) (EventBus) Erstelle ein End Point (Schnittstelle) im Event Bus um die gewünschte Events zu liefern (auch alle Events ist ok)
+  3) (Query)    In der Init Phase der Query Service hole alle Events über die neu erstellte Schnittstelle ab
+  
+  
+  4) Test
+
+  client/posts/eventbus starten
+  auf http://localhost:3000/ einige Posts submitten
+  posts werden im eventBus gespeichert
+  starten von QueryService
+  zieht sich die Services
+  http://localhost:3000/ neu laden
+  posts sind da
+
+  posts:4000 -> event-bus:4005
+
+  event:40005 -> posts:4000 
+              -> comments:4001
+              -> query:4002
+              -> moderation:4003
+
+
+
+
