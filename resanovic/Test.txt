@@ -1,0 +1,50 @@
+
+
+2-3 Services sind gegeben (Backbone)
+Keine GUI
+getestet wird mit Postman und vorgegebenen Requests
+Maximal 1 Service neu anlegen
+
+Aufpassen es könnten
+Importierte Libraries fehlen
+essenzielle Methoden gegeben wie post / get (aufpassen bei Endpoint Parameter)
+
+Von resanovic definierter request wird mit postman abgesendet und wenn zurückkommt wie es soll gibt’s die Punkte
+
+Aufpassen das library fehlt axios oder sowas
+Kontrollieren ob templates korrekt sind
+
+Es steht genau welche parameter übergeben werden und was zurück erwartet wird
+Wenn in angabe Adresse groß dann auch im Code Adresse groß
+Genau so wie in der Angabe die Schnittstelle erstellen
+
+Es gibt auch Freitextfragen beim Theorieteil
+
+
+
+
+
+3*45 min
+
+Theorieteil
+•	Moodle online
+•	keine Unterlagen -> kreativ schummeln erlaubt
+•	30min
+•	Moodle Bereich "self assessment" -> paar Fragen werden dabei sein bei der echten Prüfung?
+•	Folien reichen normal 2x durchlesen
+ 
+Praxisteil
+•	Unterlagen erlaubt
+•	Starter kit wird im Moodle bereitgestellt
+•	Service anlegen wird kommen
+•	KEIN Frontend
+•	nur Test mit POSTMAN / HOPPSCOTCH
+•	Besser selber machen, weniger kopieren (Punkte gibt’s für den Versuch auch schon)
+•	Im Starter Kit können Fehler vorkommen (axios oder andere library nicht im package.json)
+•	NAMINGS SIND WICHTIG!
+•	Probieren geht über studieren
+
+
+
+
+
