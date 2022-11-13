@@ -1,0 +1,33 @@
+pdf preview addon zum anschauen der Angabe
+
+
+1.) zu erstellendes Objekt anschauen
+EmployeeObjekt
+====================
+Employee ID:Zufälliges ID
+EmployeeName: String
+EmplyeePosition: Integer(1-Engineer, 2-Support, 3-Verwaltung, 4-Rest)
+====================
+
+2.) Services herausfinden
+welche Services brauche ich
+was hab ich schon bekommen
+welche Reihenfolge sollte ich sie implementieren
+
+-employee
+-eventbus
+-workflow
+
+
+
+
+
+EventObjekt
+====================
+EventType: String (z.B. createEmplyee, deleteEmplyee)
+Employee ID: Zufälliges ID
+EmployeeName: String
+EmplyeePosition: Integer (1-Engineer, 2-Support, 3-Verwaltung, 4-Rest)
+====================
+
+
