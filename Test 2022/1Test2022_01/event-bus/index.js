@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const axios = require("axios");
+const axios = require("../../2Test2022_02/bewertung/node_modules/axios");
 
 const app = express();
 app.use(bodyParser.json());
 
-const events = [];
+const events = []; 
 
 //POST /events/: Event Bus Service um die Pakete vom Emplyoee Service an den Workflow Service weiterzuleiten. Benutzen sie dafür axios und die Async-Aufrufe wie in den Übungen gelernt
 app.post("/events", async (req, res) => {

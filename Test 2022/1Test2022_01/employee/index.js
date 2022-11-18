@@ -7,7 +7,7 @@ const { randomBytes } = require("crypto");
 //needed for variable options in rest app
 const cors = require("cors");
 //lets you use async / await communication
-const axios = require("axios");
+const axios = require("../../2Test2022_02/bewertung/node_modules/axios");
 
 const app = express();
 app.use(bodyParser.json());
@@ -21,10 +21,10 @@ const emplyees = {};
 app.post("/package/:positionID/emplyoee", async  (req, res) => {
 
   const employeeId = randomBytes(4).toString("hex");
-  const {employeeName} = req.body;
+  const { employeeName } = req.body;
   const emplyeePosition = req.params.positionID;
 
-  //PositionID steht für die Job Position und kann folgende Werte haben (1-Engineer, 2-Support, 3- Verwaltung, 4-Rest).
+  //PositionID steht für die Job Position und kann folgende Werte haben (1-Engineer, 2-Support, 3-Verwaltung, 4-Rest).
   if(between(emplyeePosition,1,4)){
       emplyees[employeeId] = {
         employeeId,

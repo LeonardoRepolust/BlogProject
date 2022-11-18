@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const axios = require("axios");
+const axios = require("../../../Test 2022/2Test2022_02/bewertung/node_modules/axios");
 
 const app = express();
 app.use(bodyParser.json());
