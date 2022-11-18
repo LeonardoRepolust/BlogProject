@@ -7,7 +7,7 @@ const { randomBytes } = require("crypto");
 //needed for variable options in rest app
 const cors = require("cors");
 //lets you use async / await communication
-const axios = require("../../2Test2022_02/bewertung/node_modules/axios");
+const axios = require("axios");
 
 const app = express();
 app.use(bodyParser.json());
